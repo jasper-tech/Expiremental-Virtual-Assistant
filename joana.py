@@ -100,7 +100,7 @@ def open_application(app_name):
     apps = {
         "notepad": "notepad.exe",
         "calculator": "calc.exe",
-        "chrome": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+        "chrome": "chrome.exe"
     }
     if app_name in apps:
         os.system(apps[app_name])
