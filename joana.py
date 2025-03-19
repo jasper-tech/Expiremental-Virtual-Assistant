@@ -184,6 +184,7 @@ def process_instruction(instruction, text_box):
     elif "hey" in instruction or "hello" in instruction or " hey buddy" in instruction:
         talk("Hi, how can I help you?")
         response = "Hi, how can I help you?"
+        
     elif "who is" in instruction:
         person = instruction.replace("who is", "").strip()
         try:
