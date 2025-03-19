@@ -1,7 +1,3 @@
-Sure! Here's an updated README for your experimental virtual assistant prototype with a focus on the speech recognition aspect. This can be useful for documentation or sharing your project with others.
-
----
-
 # Experimental Virtual Assistant - Prototype
 
 This is a **voice command virtual assistant** built entirely in Python. It leverages various Python libraries to provide a functional prototype capable of performing tasks such as voice recognition, text-to-speech synthesis, web searches, news retrieval, weather forecasting, and more.
@@ -122,5 +118,3 @@ The assistant listens for a specific wake word, such as "Joey", and then capture
 - **More Integrations**: Add more services, such as calendar events, email management, and IoT device control.
 
 ---
-
-Feel free to adapt this README further based on your assistant's capabilities and usage. Let me know if you need any further improvements!
