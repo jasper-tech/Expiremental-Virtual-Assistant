@@ -14,11 +14,11 @@ import math
 listener = aa.Recognizer()
 machine = pyttsx3.init()
 
-# Set AI Voice Properties
+# AI Voice Properties
 voices = machine.getProperty("voices")
-machine.setProperty("voice", voices[1].id)  # Change voice (0 for male, 1 for female)
-machine.setProperty("rate", 175)  # Adjust speed
-machine.setProperty("volume", 1.0)  # Set volume to max
+machine.setProperty("voice", voices[1].id)  
+machine.setProperty("rate", 175)  
+machine.setProperty("volume", 1.0)  
 
 def talk(text):
     """Function to make Joey speak"""
@@ -83,7 +83,7 @@ def set_reminder(reminder):
 def get_news():
     """Fetch top news headlines"""
     try:
-        url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=YOUR_NEWSAPI_KEY"  # Replace with your API key
+        url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=YOUR_NEWSAPI_KEY"  
         response = requests.get(url).json()
 
         if response["status"] == "ok":
@@ -153,13 +153,13 @@ def Joey():
             talk(f"Today's date is {date_now}")
 
         elif "how are you" in instruction:
-            talk("Greetings, Master Jasper! I am at your service.")
+            talk("Greetings, Jas! I am at your service.")
 
         elif "joey you there" in instruction:
             talk("At your service, sir!")
 
         elif "what is your name" in instruction:
-            talk("I am Joana, your AI assistant.")
+            talk("I am Joana, your personal assistant.")
 
         elif "who is" in instruction:
             person = instruction.replace("who is", "").strip()
@@ -198,7 +198,7 @@ def Joey():
             talk(f"Searching for {query}")
 
         elif instruction in ["exit", "stop", "that's all"]:
-            talk("Goodbye Jasper! Have a great day.")
+            talk("Goodbye Jay! Have a great day.")
             break
 
         else:
