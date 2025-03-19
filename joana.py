@@ -33,7 +33,7 @@ def input_instruction(text_box):
     while True:
         try:
             with aa.Microphone() as origin:
-                print("Listening...")
+                print("Listening for inputs...")
                 speech = listener.listen(origin, timeout=10, phrase_time_limit=10)  
                 instruction = listener.recognize_google(speech)
                 instruction = instruction.lower()
@@ -44,7 +44,7 @@ def input_instruction(text_box):
         except aa.WaitTimeoutError:
             continue  # No speech detected, just keep listening
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"Running version 1.0 of Joey {e}")
             continue
 
 def get_weather(city="Accra"):
