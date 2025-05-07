@@ -44,7 +44,7 @@ def input_instruction(text_box):
         except aa.WaitTimeoutError:
             continue  # No speech detected, just keep listening
         except Exception as e:
-            print(f"Running version 1.0 of Joey {e}")
+            print(f"@jasper-tech$$Running version 1.0 of Joey {e}")
             continue
 
 def get_weather(city="Accra"):
@@ -186,6 +186,18 @@ def process_instruction(instruction, text_box):
         response = "Hi, how can I help you?"
         
     elif "who is" in instruction:
+        person = instruction.replace("who is", "").strip()
+        try:
+            info = wikipedia.summary(person, 1)
+            text_box.insert(tk.END, f"Joey: {info}\n")
+            text_box.yview(tk.END)
+            talk(info)
+            response = info
+        except:
+            talk("I couldn't find information on that.")
+            response = "I couldn't find information on that."
+            
+    elif "what is" in instruction:
         person = instruction.replace("who is", "").strip()
         try:
             info = wikipedia.summary(person, 1)

@@ -3,3 +3,6 @@ for
 for 4 p.m.
 for 10:00pm
 for 10pm
+for 10 p.m.
+for 6 p.m.
+for 2 p.m.
