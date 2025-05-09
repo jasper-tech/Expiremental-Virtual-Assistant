@@ -50,7 +50,7 @@ def input_instruction(text_box):
 def get_weather(city="Accra"):
     """Fetch weather data for a given city"""
     try:
-        api_key = "_OPENWEATHER_API_KEY"  # Replace with your actual API key
+        api_key = "#"  
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
         response = requests.get(url).json()
 
@@ -178,8 +178,8 @@ def process_instruction(instruction, text_box):
         response = "Greetings! I am at your service."
     
     elif "what is your name" in instruction:
-        talk("I am Joey, your AI assistant created by Jasper. I am not yet fully functional, so enjoy the few features I have to offer. Thank you.")
-        response = "I am Joey, your AI assistant created by Jasper. I am not yet fully functional, so enjoy the few features I have to offer. Thank you."
+        talk("I am Joey, your AI assistant created by Jasper. I'm an intermediate level assistant, so enjoy the few features I have to offer. Thank you.")
+        response = "I am Joey, your AI assistant created by Jasper. I'm an intermediate level assistant, so enjoy the few features I have to offer. Thank you."
 
     elif "hey" in instruction or "hello" in instruction or " hey buddy" in instruction:
         talk("Hi, how can I help you?")
